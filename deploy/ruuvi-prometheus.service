@@ -6,7 +6,7 @@ Wants=bluetooth.target
 [Service]
 Type=simple
 WorkingDirectory=/home/ruuvi/ruuvi-prometheus-scraper
-ExecStart=/home/ruuvi/ruuvi-prometheus-scraper/venv/bin/python main.py
+ExecStart=/home/ruuvi/ruuvi-prometheus-scraper/venv/bin/python3 main.py
 User=ruuvi
 Group=ruuvi
 Restart=always
