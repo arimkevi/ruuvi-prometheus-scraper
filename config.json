@@ -1,0 +1,17 @@
+{
+  "CF:CA:A0:B5:3B:E9": {
+  "name": "Keittio-ulko",
+  "last_update": 0.0,
+  "sensor_data": {}
+  },
+  "D5:04:41:3E:D4:3D": {
+    "name": "Olohuone",
+    "last_update": 0.0,
+    "sensor_data": {}
+  },
+  "CA:D1:DE:B5:FA:3F": {
+    "name": "Parveke-ulko",
+    "last_update": 0.0,
+    "sensor_data": {}
+  }
+}

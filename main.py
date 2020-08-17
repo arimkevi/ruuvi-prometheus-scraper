@@ -4,36 +4,13 @@ import time
 import pprint
 import signal
 import sys
+import json
+
 from prometheus_client import Gauge, start_http_server
 from ruuvitag_sensor.ruuvi import RuuviTagSensor
 
-beacons = {
-    'D2:43:21:3A:40:95': {
-        'name': 'Kylppäri',
-        'last_update': 0.0,
-        'sensor_data': {},
-    },
-    'E6:14:B2:83:D1:D7': {
-        'name': 'Parveke',
-        'last_update': 0.0,
-        'sensor_data': {},
-    },
-    'F7:16:D7:54:CF:BC': {
-        'name': 'Olkkari',
-        'last_update': 0.0,
-        'sensor_data': {},
-    },
-    'C8:58:81:78:A4:01': {
-        'name': 'Jääkaappi',
-        'last_update': 0.0,
-        'sensor_data': {},
-    },
-    'E9:0A:E4:6C:01:71': {
-        'name': 'Sauna',
-        'last_update': 0.0,
-        'sensor_data': {},
-    },
-}
+with open('/etc/ruuvi_prometheus/config.json') as json_file:
+    beacons = json.load(json_file)
 
 temp_gauge = Gauge('ruuvi_temperature_c', 'Temperature in Celsius', ['location'])
 humidity_gauge = Gauge('ruuvi_humidity_percent', 'Humidity %', ['location'])
