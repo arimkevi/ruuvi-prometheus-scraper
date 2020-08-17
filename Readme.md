@@ -1,27 +1,30 @@
 # Ruuvi Prometheus scraper
 
+Installer and setup update from [Hilzus ruuvi-prometheus-scraper][hilzus-repo]. 
+
 Collects weather data from [Ruuvi tags][ruuvi-tag] running the [official
 firmware][fw] for consumption by [Prometheus][prometheus].
 
-The python file `main.py` is hardcoded for my tags but can easily be modified
-for your own needs.
+You also need to configure Prometheus to scrape data from
+the app from the address `http://localhost:8000/metrics`. Example config in deploy/prometheus.yml.
 
-You can also take a look at the files under `deploy/` that I use to run this
-scraper on a Raspberry PI 3. They assume that the scraper is run with an user
-called `ruuvi`. You also need to configure Prometheus to scrape data from
-the app from the address `http://localhost:8000/metrics`.
+Install script installs required dependencies, creates ruuvi user, installs env and seutps systemd service.
+
+Uninstall script removes all above.
 
 ## Install
 
-```bash
-git clone git@github.com:Hilzu/ruuvi-prometheus-scraper.git
-cd ruuvi-prometheus-scraper
-virtualenv venv -p python3
-source venv/bin/activate
-pip install -r requirements.txt
-python main.py
-```
+Run:
 
+```curl -fsSL "https://raw.githubusercontent.com/arimkevi/ruuvi-prometheus-scraper/master/install.sh" | sudo bash```
+
+Modify /home/ruuvi/ruuvi-prometheus-scraper/config.json with your RuuviTags
+
+then run:
+
+```sudo systemctl restart ruuvi-prometheus```
+
+[hilzus-repo]: https://github.com/Hilzu/ruuvi-prometheus-scraper
 [ruuvi-tag]: https://tag.ruuvi.com/
 [fw]: https://lab.ruuvi.com/ruuvitag-fw/
 [prometheus]: https://prometheus.io/
