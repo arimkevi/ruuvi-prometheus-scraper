@@ -1,4 +1,4 @@
-ruuvi raspberrypi = (root) NOPASSWD: /bin/hciconfig
-ruuvi raspberrypi = (root) NOPASSWD: /usr/bin/hcitool
-ruuvi raspberrypi = (root) NOPASSWD: /usr/bin/hcidump
-ruuvi raspberrypi = (root) NOPASSWD: /bin/kill
+ruuvi ALL = (root) NOPASSWD: /bin/hciconfig
+ruuvi ALL = (root) NOPASSWD: /usr/bin/hcitool
+ruuvi ALL = (root) NOPASSWD: /usr/bin/hcidump
+ruuvi ALL = (root) NOPASSWD: /bin/kill
