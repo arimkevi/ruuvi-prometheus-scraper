@@ -12,6 +12,14 @@ Install script installs required dependencies, creates ruuvi user, installs env 
 
 Uninstall script removes all above.
 
+## Grafana dashboard
+
+[Import from grafana][grafana]
+
+or 
+
+import directly from file: grafana-dash.json
+
 ## Install
 
 Run:
@@ -28,3 +36,4 @@ then run:
 [ruuvi-tag]: https://tag.ruuvi.com/
 [fw]: https://lab.ruuvi.com/ruuvitag-fw/
 [prometheus]: https://prometheus.io/
+[grafana]: https://grafana.com/grafana/dashboards/12838
