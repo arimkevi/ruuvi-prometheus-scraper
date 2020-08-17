@@ -577,7 +577,10 @@
   ],
   "schemaVersion": 26,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "Prometheus",
+    "RuuviTag"
+  ],
   "templating": {
     "list": []
   },
@@ -602,5 +605,5 @@
   "timezone": "",
   "title": "RuuviTag Prometheus Dashboard",
   "uid": "St90ckgRz",
-  "version": 6
+  "version": 7
 }
