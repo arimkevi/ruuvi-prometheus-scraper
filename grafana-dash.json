@@ -238,32 +238,23 @@
           "custom": {
             "align": null
           },
-          "decimals": 1,
           "mappings": [],
-          "max": 50,
-          "min": -50,
+          "max": 1,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-blue",
+                "color": "orange",
                 "value": null
               },
               {
-                "color": "semi-dark-blue",
-                "value": -10
-              },
-              {
                 "color": "green",
-                "value": 0
+                "value": 0.3
               },
               {
-                "color": "orange",
-                "value": 25
-              },
-              {
-                "color": "red",
-                "value": 30
+                "color": "dark-blue",
+                "value": 0.9
               }
             ]
           },
@@ -414,10 +405,11 @@
           "custom": {
             "align": null
           },
-          "decimals": 3,
+          "decimals": 4,
           "mappings": [],
-          "max": 1.03,
-          "min": 1,
+          "max": 1084,
+          "min": 870,
+          "noValue": "NA",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -427,11 +419,11 @@
               },
               {
                 "color": "#EAB839",
-                "value": 1.009
+                "value": 1009
               },
               {
                 "color": "green",
-                "value": 1.022
+                "value": 1022
               }
             ]
           },
@@ -457,7 +449,7 @@
           "fields": "",
           "values": true
         },
-        "showThresholdLabels": false,
+        "showThresholdLabels": true,
         "showThresholdMarkers": true
       },
       "pluginVersion": "7.1.3",
@@ -605,5 +597,5 @@
   "timezone": "",
   "title": "RuuviTag Prometheus Dashboard",
   "uid": "St90ckgRz",
-  "version": 7
+  "version": 8
 }
