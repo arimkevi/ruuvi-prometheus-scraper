@@ -16,8 +16,8 @@ useradd -m ruuvi ;
 echo "Downloading repo..";
 curl -sL "https://github.com/arimkevi/ruuvi-prometheus-scraper/archive/master.zip" > "/tmp/ruuvi_prometheus.zip";
 unzip -qq -o "/tmp/ruuvi_prometheus.zip" -d "/home/ruuvi";
-mv /home/ruuvi/ruuvi-prometheus-scraper-master /home/ruuvi/ruuvi-prometheus-scraper
-chown -R ruuvi:ruuvi /home/ruuvi/ruuvi-prometheus-scraper/
+mv /home/ruuvi/ruuvi-prometheus-scraper-master /home/ruuvi/ruuvi-prometheus-scraper;
+chown -R ruuvi:ruuvi /home/ruuvi/ruuvi-prometheus-scraper/;
 rm /tmp/ruuvi_prometheus.zip;
 
 echo "Installing venv..";
@@ -29,10 +29,10 @@ runuser -l ruuvi -c 'source /home/ruuvi/ruuvi-prometheus-scraper/venv/bin/activa
 echo "Setting up service.."
 mv "/home/ruuvi/ruuvi-prometheus-scraper/deploy/ruuvi-prometheus.service" "/etc/systemd/system/";
 mv "/home/ruuvi/ruuvi-prometheus-scraper/deploy/ruuvi-prometheus.timer" "/etc/systemd/system/";
-cp /home/ruuvi/ruuvi-prometheus-scraper/deploy/ruuvi-sudoers /etc/sudoers.d/
+cp /home/ruuvi/ruuvi-prometheus-scraper/deploy/ruuvi-sudoers /etc/sudoers.d/;
 systemctl stop ruuvi-prometheus.timer;
 systemctl disable ruuvi-prometheus.timer;
 
-systemctl daemon-reload
+systemctl daemon-reload;
 systemctl enable ruuvi-prometheus.timer;
 systemctl start ruuvi-prometheus.timer;

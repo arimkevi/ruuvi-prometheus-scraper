@@ -9,7 +9,7 @@ import json
 from prometheus_client import Gauge, start_http_server
 from ruuvitag_sensor.ruuvi import RuuviTagSensor
 
-with open('/etc/ruuvi_prometheus/config.json') as json_file:
+with open('/home/ruuvi/ruuvi-prometheus-scraper/config.json') as json_file:
     beacons = json.load(json_file)
 
 temp_gauge = Gauge('ruuvi_temperature_c', 'Temperature in Celsius', ['location'])
